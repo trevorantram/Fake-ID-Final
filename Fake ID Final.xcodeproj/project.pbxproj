@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C12F0C5C1C9F4ACF000B02A8 /* AppIcon120*120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12F0C5B1C9F4ACF000B02A8 /* AppIcon120*120@2x.png */; };
 		C15FB9381C98D144009E4BD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15FB9371C98D144009E4BD1 /* AppDelegate.swift */; };
-		C15FB93A1C98D144009E4BD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15FB9391C98D144009E4BD1 /* ViewController.swift */; };
-		C15FB93D1C98D144009E4BD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15FB93B1C98D144009E4BD1 /* Main.storyboard */; };
 		C15FB9401C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C15FB93E1C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld */; };
 		C15FB9421C98D144009E4BD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C15FB9411C98D144009E4BD1 /* Assets.xcassets */; };
 		C15FB9451C98D144009E4BD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15FB9431C98D144009E4BD1 /* LaunchScreen.storyboard */; };
 		C15FB9501C98D144009E4BD1 /* Fake_ID_FinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15FB94F1C98D144009E4BD1 /* Fake_ID_FinalTests.swift */; };
 		C15FB95B1C98D144009E4BD1 /* Fake_ID_FinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15FB95A1C98D144009E4BD1 /* Fake_ID_FinalUITests.swift */; };
+		C15FB9721C98D15F009E4BD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15FB96F1C98D15F009E4BD1 /* ViewController.swift */; };
+		C15FB9731C98D15F009E4BD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15FB9711C98D15F009E4BD1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +35,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C15FB9991C98D1B9009E4BD1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C15FB9C21C98D2E5009E4BD1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C12F0C5B1C9F4ACF000B02A8 /* AppIcon120*120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon120*120@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/AppIcon120*120@2x.png"; sourceTree = "<group>"; };
 		C15FB9341C98D143009E4BD1 /* Fake ID Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fake ID Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15FB9371C98D144009E4BD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C15FB9391C98D144009E4BD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C15FB93C1C98D144009E4BD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C15FB93F1C98D144009E4BD1 /* Fake_ID_Final.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fake_ID_Final.xcdatamodel; sourceTree = "<group>"; };
 		C15FB9411C98D144009E4BD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C15FB9441C98D144009E4BD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +72,8 @@
 		C15FB9561C98D144009E4BD1 /* Fake ID FinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fake ID FinalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15FB95A1C98D144009E4BD1 /* Fake_ID_FinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fake_ID_FinalUITests.swift; sourceTree = "<group>"; };
 		C15FB95C1C98D144009E4BD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C15FB96F1C98D15F009E4BD1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../Fake ID/Fake ID/ViewController.swift"; sourceTree = "<group>"; };
+		C15FB9701C98D15F009E4BD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +125,12 @@
 			isa = PBXGroup;
 			children = (
 				C15FB9371C98D144009E4BD1 /* AppDelegate.swift */,
-				C15FB9391C98D144009E4BD1 /* ViewController.swift */,
-				C15FB93B1C98D144009E4BD1 /* Main.storyboard */,
+				C15FB96F1C98D15F009E4BD1 /* ViewController.swift */,
+				C15FB9711C98D15F009E4BD1 /* Main.storyboard */,
 				C15FB9411C98D144009E4BD1 /* Assets.xcassets */,
 				C15FB9431C98D144009E4BD1 /* LaunchScreen.storyboard */,
 				C15FB9461C98D144009E4BD1 /* Info.plist */,
+				C12F0C5B1C9F4ACF000B02A8 /* AppIcon120*120@2x.png */,
 				C15FB93E1C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld */,
 			);
 			path = "Fake ID Final";
@@ -138,6 +164,8 @@
 				C15FB9301C98D143009E4BD1 /* Sources */,
 				C15FB9311C98D143009E4BD1 /* Frameworks */,
 				C15FB9321C98D143009E4BD1 /* Resources */,
+				C15FB9991C98D1B9009E4BD1 /* Embed App Extensions */,
+				C15FB9C21C98D2E5009E4BD1 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -232,9 +260,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12F0C5C1C9F4ACF000B02A8 /* AppIcon120*120@2x.png in Resources */,
+				C15FB9731C98D15F009E4BD1 /* Main.storyboard in Resources */,
 				C15FB9451C98D144009E4BD1 /* LaunchScreen.storyboard in Resources */,
 				C15FB9421C98D144009E4BD1 /* Assets.xcassets in Resources */,
-				C15FB93D1C98D144009E4BD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C15FB93A1C98D144009E4BD1 /* ViewController.swift in Sources */,
+				C15FB9721C98D15F009E4BD1 /* ViewController.swift in Sources */,
 				C15FB9381C98D144009E4BD1 /* AppDelegate.swift in Sources */,
 				C15FB9401C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld in Sources */,
 			);
@@ -297,14 +326,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C15FB93B1C98D144009E4BD1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C15FB93C1C98D144009E4BD1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C15FB9431C98D144009E4BD1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -313,13 +334,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		C15FB9711C98D15F009E4BD1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C15FB9701C98D15F009E4BD1 /* Base */,
+			);
+			name = Main.storyboard;
+			path = "../../Fake ID/Fake ID";
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C15FB95D1C98D144009E4BD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -353,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -365,7 +395,7 @@
 		C15FB95E1C98D144009E4BD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -393,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -405,10 +435,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Fake",
+					ID,
+					Final,
+					"$(PROJECT_DIR)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "Fake ID Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TrevorA.Fake-ID-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -416,10 +455,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Fake",
+					ID,
+					Final,
+					"$(PROJECT_DIR)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "Fake ID Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TrevorA.Fake-ID-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -488,6 +536,7 @@
 				C15FB9611C98D144009E4BD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C15FB9621C98D144009E4BD1 /* Build configuration list for PBXNativeTarget "Fake ID FinalTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +545,7 @@
 				C15FB9641C98D144009E4BD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C15FB9651C98D144009E4BD1 /* Build configuration list for PBXNativeTarget "Fake ID FinalUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +554,7 @@
 				C15FB9671C98D144009E4BD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -4,6 +4,34 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Fake ID APp (Notification).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Fake ID APp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Fake ID Final WatchKit 1 App (Notification).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Fake ID Final WatchKit 1 App.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Fake ID Final.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +51,16 @@
 			<true/>
 		</dict>
 		<key>C15FB9551C98D144009E4BD1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C15FB9841C98D1B9009E4BD1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C15FB99B1C98D2E5009E4BD1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
