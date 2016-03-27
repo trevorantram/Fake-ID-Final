@@ -1,4 +1,4 @@
-	//
+//
 //  ViewController.swift
 //  Fake ID
 //
@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import iAd
+import LocalAuthentication
 
 
 
-// Apple People It was intentional to do this all on one view controller I just wanted to try it
-var interAd = ADInterstitialAd()
+
+
 var interAdView: UIView = UIView()
 var gender = "Male"
 var name = "Custom Name"
@@ -24,7 +24,8 @@ var femaleNames = ["Emilia Parkerson","Marcillia Lee","Anna Miller","Cameron Mar
 var birthdays = ["6/25/1990","3/15/1993","1/13/2000","7/24/87","3,21/1994","1/8/1978"]
 var timer = 0
 var timerStop = false
-class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,ADInterstitialAdDelegate,ADBannerViewDelegate {
+var acutalName = ""
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     let picker = UIImagePickerController()
     var closeButton = UIButton(type:UIButtonType.System) as UIButton
     @IBOutlet weak var main: UILabel!
@@ -41,6 +42,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var genderSwitch: UISwitch!
     @IBOutlet weak var nameSwitch: UISwitch!
     @IBOutlet weak var USALogo: UIImageView!
+    @IBOutlet weak var authenticateO: UIButton!
     @IBOutlet weak var imageSwitch: UISwitch!
     @IBOutlet weak var generateO: UIButton!
     @IBOutlet weak var customName: UITextField!
@@ -53,6 +55,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var resetButtonO: UIButton!
     @IBOutlet weak var serialNumberLabel: UILabel!
     @IBOutlet weak var background: UIImageView!
+    
+    @IBAction func authenticateA(sender: AnyObject) {
+        
+        authenticateUser()
+        
+        
+    }
     @IBAction func resetButtonA(sender: AnyObject) {
         // this resets the view
         timerStop = true
@@ -99,10 +108,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     var imagePicker: UIImagePickerController!
     @IBAction func gen2A(sender: AnyObject) {
         customName.hidden = true
+        customName.endEditing(true)
+        generateCode()
     // Unhiding all the stuff
        timerStop = false
     var customNameInput = customName.text
-        loadAd()
         if timerStop == true{
         let timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerWentOff", userInfo: nil, repeats: true)
         }
@@ -111,6 +121,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         if name == "Custom Name"{
          
             nameField.text = "\(customNameInput!)"
+            acutalName = nameField.text!
             
             
         }
@@ -131,6 +142,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         flagO.hidden = false
         disclaimer.hidden = false
         resetButtonO.hidden =  false
+        authenticateO.hidden = false
        
         
         
@@ -142,15 +154,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
   
             if nameSwitch != true{
-                
-                
-                if gender == "Male"{
-                    nameField.text = "\(customNameInput!)"
-                }else if gender == "Female"{
-                    nameField.text = "\(customNameInput!)"
-                    
-                }
-                
+           
+           nameField.text = acutalName
                 
                 
                 
@@ -160,9 +165,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                 if gender == "Male"{
                     nameField.text = "\(theboyName)"
                     nameField.hidden = false
+                    acutalName = theboyName
                 }else if gender == "Female"{
                     nameField.text = "\(thegirlName)"
                     nameField.hidden = false
+                    acutalName = thegirlName
                     
                 }
             
@@ -210,7 +217,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         timer++
         if timer == 15 {
             timer = 0
-            loadAd()
+        
             
         }
         
@@ -289,6 +296,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             RIO.hidden = true
             enterD.hidden = false
             Gen2O.hidden = false
+            acutalName = theboyName
             if nameSwitch.on != true {
                 
                 customName.hidden = false
@@ -303,6 +311,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             var girlNameNum = Int(arc4random_uniform(UInt32(femaleNames.count)))
              thegirlName = femaleNames[girlNameNum]
             print(thegirlName)
+            acutalName = thegirlName
             
             genderSwitch.hidden = true
             nameSwitch.hidden = true
@@ -335,38 +344,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
 
     
-    func loadAd() {
-        print("load ad")
-        interAd = ADInterstitialAd()
-        interAd.delegate = self
-    }
     
-    func interstitialAd(interstitialAd: ADInterstitialAd!, didFailWithError error: NSError!) {
-        print("failed to receive")
-        print(error.localizedDescription)
-        
-        closeButton.removeFromSuperview()
-        interAdView.removeFromSuperview()
-        
-    }
-
-
-    
-    func interstitialAdDidUnload(interstitialAd: ADInterstitialAd!) {
-        print("Unloaded")
-    }
-    func interstitialAdDidLoad(interstitialAd: ADInterstitialAd!) {
-        print("ad did load")
-        
-        interAdView = UIView()
-        interAdView.frame = self.view.bounds
-        view.addSubview(interAdView)
-        
-        interAd.presentInView(interAdView)
-        UIViewController.prepareInterstitialAds()
-        
-        interAdView.addSubview(closeButton)
-    }
     
     
     
@@ -374,9 +352,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-              self.canDisplayBannerAds = true
-        loadAd()
         
+        
+    
+        
+        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        leftSwipe.direction = .Left
+        view.addGestureRecognizer(leftSwipe)
         
         closeButton.frame = CGRectMake(10, 10, 20, 20)
         closeButton.layer.cornerRadius = 10
@@ -411,6 +393,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         disclaimer.hidden = true
         resetButtonO.hidden = true
         picker.delegate = self
+        authenticateO.hidden = true
         
         
         
@@ -425,6 +408,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
          flagO.transform = CGAffineTransformMakeRotation(171.2)
          disclaimer.transform = CGAffineTransformMakeRotation(171.2)
         resetButtonO.transform = CGAffineTransformMakeRotation(171.2)
+        authenticateO.transform = CGAffineTransformMakeRotation(171.2)
         
     }
             
@@ -455,10 +439,89 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-   
+    
+    
+    
+    var qrcodeImage: CIImage!
+    
+    func generateCode(){
+        let final = "\(acutalName),12,Philldelphia"
+        let data = final.dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: false)
+        
+        let filter = CIFilter(name: "CIQRCodeGenerator")
+        
+        filter!.setValue(data, forKey: "inputMessage")
+        filter!.setValue("Q", forKey: "inputCorrectionLevel")
+        
+        qrcodeImage = filter!.outputImage
+        
+        
+        displayQRCodeImage()
+    }
+    
+    
+    
+    func displayQRCodeImage() {
+        let scaleX = USALogo.frame.size.width / qrcodeImage.extent.size.width
+        let scaleY = USALogo.frame.size.height / qrcodeImage.extent.size.height
+        
+        let transformedImage = qrcodeImage.imageByApplyingTransform(CGAffineTransformMakeScale(scaleX, scaleY))
+            
+            USALogo.image = UIImage(CIImage: transformedImage)
+    
+    }
+    
+    
+    
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Left) {
+            print("Swipe Left")
+         performSegueWithIdentifier("scan", sender: self)
+            
+            
+        }
+    }
+    
+    
+    
+    
+    
+    func authenticateUser() {
+        var context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
+            var reason = "Identify yourself!"
+            
+            context.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                [unowned self] (success: Bool, authenticationError: NSError?) -> Void in
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    if success {
+                        self.performSegueWithIdentifier("secret", sender: self)
+                    } else {
+                        if let error = authenticationError {
+                            if error.code == LAError.UserFallback.rawValue {
+                                let ac = UIAlertController(title: "Passcode? Ha!", message: "It's Touch ID or nothing – sorry!", preferredStyle: .Alert)
+                                ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                                self.presentViewController(ac, animated: true, completion: nil)
+                                return
+                            }
+                        }
+                        
+                        let ac = UIAlertController(title: "Authentication failed", message: "Your fingerprint could not be verified; please try again.", preferredStyle: .Alert)
+                        ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                        self.presentViewController(ac, animated: true, completion: nil)
+                    }
+                }
+            }
+        } else {
+            let ac = UIAlertController(title: "Touch ID not available", message: "Your device is not configured for Touch ID.", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(ac, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
 }
-    
-    
-
-
-

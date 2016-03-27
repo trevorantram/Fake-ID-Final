@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C109BB371CA89BCA0082D67B /* secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109BB361CA89BCA0082D67B /* secret.swift */; };
 		C12F0C5C1C9F4ACF000B02A8 /* AppIcon120*120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12F0C5B1C9F4ACF000B02A8 /* AppIcon120*120@2x.png */; };
 		C15FB9381C98D144009E4BD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15FB9371C98D144009E4BD1 /* AppDelegate.swift */; };
 		C15FB9401C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C15FB93E1C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld */; };
@@ -15,7 +16,8 @@
 		C15FB9501C98D144009E4BD1 /* Fake_ID_FinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15FB94F1C98D144009E4BD1 /* Fake_ID_FinalTests.swift */; };
 		C15FB95B1C98D144009E4BD1 /* Fake_ID_FinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15FB95A1C98D144009E4BD1 /* Fake_ID_FinalUITests.swift */; };
 		C15FB9731C98D15F009E4BD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15FB9711C98D15F009E4BD1 /* Main.storyboard */; };
-		C1C57F9D1CA5D2E500381A31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C57F9C1CA5D2E500381A31 /* ViewController.swift */; };
+		C1B7E17C1CA85C7D00F18C45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B7E17B1CA85C7D00F18C45 /* ViewController.swift */; };
+		C1DB453D1CA8368200C73040 /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DB453C1CA8368200C73040 /* Scan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C109BB361CA89BCA0082D67B /* secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = secret.swift; path = ../secret.swift; sourceTree = "<group>"; };
 		C12F0C5B1C9F4ACF000B02A8 /* AppIcon120*120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon120*120@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/AppIcon120*120@2x.png"; sourceTree = "<group>"; };
 		C15FB9341C98D143009E4BD1 /* Fake ID Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fake ID Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15FB9371C98D144009E4BD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +76,8 @@
 		C15FB95A1C98D144009E4BD1 /* Fake_ID_FinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fake_ID_FinalUITests.swift; sourceTree = "<group>"; };
 		C15FB95C1C98D144009E4BD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C15FB9701C98D15F009E4BD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C1C57F9C1CA5D2E500381A31 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1B7E17B1CA85C7D00F18C45 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1DB453C1CA8368200C73040 /* Scan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +129,10 @@
 			isa = PBXGroup;
 			children = (
 				C15FB9371C98D144009E4BD1 /* AppDelegate.swift */,
-				C1C57F9C1CA5D2E500381A31 /* ViewController.swift */,
 				C15FB9711C98D15F009E4BD1 /* Main.storyboard */,
+				C1DB453C1CA8368200C73040 /* Scan.swift */,
+				C1B7E17B1CA85C7D00F18C45 /* ViewController.swift */,
+				C109BB361CA89BCA0082D67B /* secret.swift */,
 				C15FB9411C98D144009E4BD1 /* Assets.xcassets */,
 				C15FB9431C98D144009E4BD1 /* LaunchScreen.storyboard */,
 				C15FB9461C98D144009E4BD1 /* Info.plist */,
@@ -224,6 +230,7 @@
 				TargetAttributes = {
 					C15FB9331C98D143009E4BD1 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5EEYDJ9QYW;
 					};
 					C15FB94A1C98D144009E4BD1 = {
 						CreatedOnToolsVersion = 7.3;
@@ -289,7 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C15FB9381C98D144009E4BD1 /* AppDelegate.swift in Sources */,
-				C1C57F9D1CA5D2E500381A31 /* ViewController.swift in Sources */,
+				C1DB453D1CA8368200C73040 /* Scan.swift in Sources */,
+				C109BB371CA89BCA0082D67B /* secret.swift in Sources */,
+				C1B7E17C1CA85C7D00F18C45 /* ViewController.swift in Sources */,
 				C15FB9401C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +444,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Fake",
@@ -447,6 +458,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TrevorA.Fake-ID-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -455,6 +467,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Fake",
@@ -467,6 +481,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TrevorA.Fake-ID-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
