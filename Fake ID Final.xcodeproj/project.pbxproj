@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C109BB371CA89BCA0082D67B /* secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109BB361CA89BCA0082D67B /* secret.swift */; };
+		C12428FC1CA9DD8600AA3743 /* logIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12428FB1CA9DD8600AA3743 /* logIn.swift */; };
+		C12429111CA9E3A200AA3743 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C124290F1CA9E3A200AA3743 /* Parse.framework */; };
+		C12429121CA9E3A200AA3743 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12429101CA9E3A200AA3743 /* Bolts.framework */; };
 		C12F0C5C1C9F4ACF000B02A8 /* AppIcon120*120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12F0C5B1C9F4ACF000B02A8 /* AppIcon120*120@2x.png */; };
 		C15FB9381C98D144009E4BD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15FB9371C98D144009E4BD1 /* AppDelegate.swift */; };
 		C15FB9401C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C15FB93E1C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld */; };
@@ -62,6 +65,9 @@
 
 /* Begin PBXFileReference section */
 		C109BB361CA89BCA0082D67B /* secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = secret.swift; path = ../secret.swift; sourceTree = "<group>"; };
+		C12428FB1CA9DD8600AA3743 /* logIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logIn.swift; sourceTree = "<group>"; };
+		C124290F1CA9E3A200AA3743 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C12429101CA9E3A200AA3743 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		C12F0C5B1C9F4ACF000B02A8 /* AppIcon120*120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon120*120@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/AppIcon120*120@2x.png"; sourceTree = "<group>"; };
 		C15FB9341C98D143009E4BD1 /* Fake ID Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fake ID Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15FB9371C98D144009E4BD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,17 +87,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C15FB9311C98D143009E4BD1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C15FB9481C98D144009E4BD1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12429111CA9E3A200AA3743 /* Parse.framework in Frameworks */,
+				C12429121CA9E3A200AA3743 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,12 +133,14 @@
 				C15FB9711C98D15F009E4BD1 /* Main.storyboard */,
 				C1DB453C1CA8368200C73040 /* Scan.swift */,
 				C1B7E17B1CA85C7D00F18C45 /* ViewController.swift */,
+				C12428FB1CA9DD8600AA3743 /* logIn.swift */,
 				C109BB361CA89BCA0082D67B /* secret.swift */,
 				C15FB9411C98D144009E4BD1 /* Assets.xcassets */,
 				C15FB9431C98D144009E4BD1 /* LaunchScreen.storyboard */,
 				C15FB9461C98D144009E4BD1 /* Info.plist */,
 				C12F0C5B1C9F4ACF000B02A8 /* AppIcon120*120@2x.png */,
-				C15FB93E1C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld */,
+				C124290F1CA9E3A200AA3743 /* Parse.framework */,
+				C12429101CA9E3A200AA3743 /* Bolts.framework */,
 			);
 			path = "Fake ID Final";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 		C15FB94E1C98D144009E4BD1 /* Fake ID FinalTests */ = {
 			isa = PBXGroup;
 			children = (
+				C15FB93E1C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld */,
 				C15FB94F1C98D144009E4BD1 /* Fake_ID_FinalTests.swift */,
 				C15FB9511C98D144009E4BD1 /* Info.plist */,
 			);
@@ -168,7 +172,6 @@
 			buildConfigurationList = C15FB95F1C98D144009E4BD1 /* Build configuration list for PBXNativeTarget "Fake ID Final" */;
 			buildPhases = (
 				C15FB9301C98D143009E4BD1 /* Sources */,
-				C15FB9311C98D143009E4BD1 /* Frameworks */,
 				C15FB9321C98D143009E4BD1 /* Resources */,
 				C15FB9991C98D1B9009E4BD1 /* Embed App Extensions */,
 				C15FB9C21C98D2E5009E4BD1 /* Embed Watch Content */,
@@ -300,6 +303,7 @@
 				C109BB371CA89BCA0082D67B /* secret.swift in Sources */,
 				C1B7E17C1CA85C7D00F18C45 /* ViewController.swift in Sources */,
 				C15FB9401C98D144009E4BD1 /* Fake_ID_Final.xcdatamodeld in Sources */,
+				C12428FC1CA9DD8600AA3743 /* logIn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -456,9 +461,14 @@
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "Fake ID Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TrevorA.Fake-ID-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -467,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -479,6 +490,10 @@
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "Fake ID Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TrevorA.Fake-ID-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -490,6 +505,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Fake",
+					ID,
+					Final,
+				);
 				INFOPLIST_FILE = "Fake ID FinalTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TrevorA.Fake-ID-FinalTests";
@@ -502,6 +523,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Fake",
+					ID,
+					Final,
+				);
 				INFOPLIST_FILE = "Fake ID FinalTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TrevorA.Fake-ID-FinalTests";
@@ -580,7 +607,8 @@
 				C15FB93F1C98D144009E4BD1 /* Fake_ID_Final.xcdatamodel */,
 			);
 			currentVersion = C15FB93F1C98D144009E4BD1 /* Fake_ID_Final.xcdatamodel */;
-			path = Fake_ID_Final.xcdatamodeld;
+			name = Fake_ID_Final.xcdatamodeld;
+			path = "../Fake ID Final/Fake_ID_Final.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
